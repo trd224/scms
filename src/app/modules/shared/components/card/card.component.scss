@@ -1,0 +1,18 @@
+@import '../../../../../scss/base/includes.scss';
+.card{padding: 16px;background: #fff;box-shadow: 0 1px 3px rgba(36,39,44,.15);cursor: pointer;
+    margin-bottom: 10px;
+    
+    .count{color: $black;font-size: 35px;margin-bottom: 10px;}
+    &.packed{
+        .count{color: #268ddd;}
+    }
+    &.shipped{
+        .count{color: #ddb630;}
+    }
+    &.delivered{
+        .count{color: #28a745;}
+    }
+    &.canceled{
+        .count{color: #db584b;}
+    }
+}

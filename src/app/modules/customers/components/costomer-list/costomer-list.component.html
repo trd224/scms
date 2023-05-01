@@ -1,0 +1,29 @@
+<div class="routerOutlet">
+    <div class="table-responsive">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <td>{{customer.id}}</td>
+                <td><a routerLink="{{customer.id}}">{{customer.name}}</a></td>
+                <td>{{customer.username}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.address.street}} {{customer.address.suite}} {{customer.address.city}} {{customer.address.zipcode}}</td>
+                <td>{{customer.phone}}</td>
+                <td>{{customer.website}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+

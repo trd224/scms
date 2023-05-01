@@ -1,0 +1,31 @@
+<div class="routerOutlet">
+    <h1>Sales Activity</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- <ng-container *ngFor="let item of data">
+                <div class="col-xs-3"><app-card [item]="item"></app-card></div>
+            </ng-container> -->
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+                <app-card [data]="packeddata" [cls]="'packed'" (click)="openOrder('packed', packeddata)">
+                    <span class="title">Packed</span>
+                </app-card>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+                <app-card [data]="shippeddata" [cls]="'shipped'" (click)="openOrder('shipped', shippeddata)">
+                    <span>Shipped</span>
+                </app-card>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+                <app-card [data]="delivereddata" [cls]="'delivered'" (click)="openOrder('delivered', delivereddata)">
+                    <span>Delivered</span>
+                </app-card>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+                <app-card [data]="canceleddata" [cls]="'canceled'" (click)="openOrder('canceled', canceleddata)">
+                    <span>Canceled</span>
+                </app-card>
+            </div>
+        </div>
+    </div>
+</div>
